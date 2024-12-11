@@ -1,0 +1,1260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Grand Blue Dreaming</title>
+<meta http-equiv="content-language" content="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797892639466026"
+     crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link rel="shortcut icon" href="../../img/dwsico.png" type="image/x-icon">
+
+
+
+<!--Begin: Stylesheet-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="style.css">
+<!--End: Stylesheet-->
+<meta name="google-adsense-account" content="ca-pub-7797892639466026">
+
+
+<style type="text/css">
+*{
+    margin: 0 0 0 0; 
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    
+    :root{
+        --red:#362c2c9e;
+        --black:#000000;
+        --light-color:#181818;
+        --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+        --font: calc(.2652 * 8vh);
+        --white:white;
+    }
+ html{   
+    scroll-padding-top:5.5rem;
+    scroll-behavior:smooth;
+}
+
+
+.link > ul > li > a > img{
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(223, 223, 223);
+    transition: 0.5s;
+}
+
+
+.link > ul > li > a > img:hover{
+  transition: 0.5s;
+    height: 10%;
+    width: 10%;
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    
+}
+
+.link > ul{
+    margin:0 25% ;
+    list-style: none;
+
+}
+
+.link > ul > li{
+    display: inline;
+    margin:calc(.2526 * 4vh);
+}
+
+    #loader{
+        background: #000 url("../vid/loder.gif") no-repeat center center;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        opacity: .6;
+        position: fixed;
+        z-index: 100000;
+    }
+    
+
+    li
+    {
+    list-style: none;
+    }
+    section
+    {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+    }
+
+    
+    .title
+    {
+    font-size: 20px;
+    font-weight: 600;
+    color: #dcdee1;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    .container
+    {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    padding: 0;
+    /* border: 2px solid red; */
+    }
+    .container container
+    {
+    position: relative;
+    width: 50%;
+    height: 80%;
+    overflow: hidden;
+    outline: none;
+    }
+    
+    .playlistBx
+    {
+    position: relative;
+    height: 100%;
+    margin: 0 10px 0 10px;
+    /* border: 2px solid green; */
+    }
+    .playlist
+    {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+    border-top: 1px solid #dcdee1;
+    }
+    .playlist::-webkit-scrollbar
+    {
+    width: 0px;
+    }
+    .playlistBx .row .AllLessons
+    {
+    display: block;
+    text-align: left;
+    color: #dcdee1;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 40px;
+    line-height: 40px;
+    }
+    .playlist li
+    {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: #dcdee1;
+    cursor: pointer;
+    border: 1px solid transparent;
+    padding: 15px 20px;
+    border-radius: 5px;
+    }
+    .playlist li:hover
+    {
+    border: 0.5px solid var(--red);
+    }
+    .playlist li .row span
+    {
+    font-size: 15px;
+    font-weight: 400;
+    color: #dcdee1;
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+    }
+  
+    .playlist li.playing .row span
+    {
+    color: #fff;
+    }
+    .playlist li span.duration
+    {
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    color: #dcdee1;
+    text-align: right;
+    }
+    .playlist li.playing
+    {
+    pointer-events: none;
+    background: var(--red);
+    border: 0.5px solid var(--white);
+    }
+    
+    
+    
+    
+    
+    @media(max-width: 1092px){
+    
+    .container
+    {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        overflow: hidden;
+    }
+ 
+    .title{
+        display: none;
+    }
+    .playlistBx
+    {
+        height: 380px;
+        margin-top: 10px;
+    }
+    .playlist
+    {
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 40px);
+        overflow-y: scroll;
+    }
+    }
+
+
+
+#st-1 {
+  font-family: "Helvetica Neue", Verdana, Helvetica, Arial, sans-serif;;
+  direction: ltr;
+  display: block;
+  opacity: 1;
+  text-align: center;
+  z-index: 94034;
+}
+#st-1.st-animated {
+  -moz-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; -ms-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; -o-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; -webkit-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in;
+}
+#st-1.st-hidden {
+  opacity: 0;
+}
+
+#st-1.st-preview {
+  display: none!important;
+  opacity: 0!important;
+}
+#st-1.st-hide {
+  display: none;
+}
+#st-1 .st-btn {
+  -moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+  -moz-transition: opacity 0.2s ease-in, top 0.2s ease-in; -ms-transition: opacity 0.2s ease-in, top 0.2s ease-in; -o-transition: opacity 0.2s ease-in, top 0.2s ease-in; -webkit-transition: opacity 0.2s ease-in, top 0.2s ease-in; transition: opacity 0.2s ease-in, top 0.2s ease-in;
+  -moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 8px;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  top: 0;
+  vertical-align: top;
+  white-space: nowrap;
+}
+#st-1 .st-btn:last-child {
+  margin-right: 0;
+}
+#st-1 .st-btn > svg {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 8px;
+  vertical-align: top;
+}
+#st-1 .st-btn > img {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 8px;
+  vertical-align: top;
+}
+#st-1 .st-btn > span {
+  -moz-transition: all 0.2s ease-in; -ms-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in; transition: all 0.2s ease-in;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  min-width: 60px;
+  opacity: 1;
+  padding: 0 6px;
+  position: relative;
+  vertical-align: top;
+}
+#st-1.st-has-labels .st-btn {
+  min-width: 120px;
+}
+#st-1.st-has-labels .st-btn.st-remove-label {
+  min-width: 50px;
+}
+#st-1.st-has-labels .st-btn.st-remove-label > span {
+  display: none;
+}
+#st-1.st-has-labels .st-btn.st-hide-label > span {
+  display: none;
+}
+#st-1 .st-total {
+  color: #555;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 12px;
+  margin-right: 0;
+  max-width: 80px;
+  padding: 4px 8px;
+  text-align: center;
+}
+#st-1 .st-total.st-hidden {
+  display: none;
+}
+#st-1 .st-total > span {
+  font-size: 16px;
+  line-height: 17px;
+  display: block;
+  padding: 0;
+}
+#st-1 .st-total > span.st-shares {
+  font-size: 9px;
+  line-height: 9px;
+}
+#st-1.st-justified {
+  display: flex;
+  text-align: center;
+}
+#st-1.st-justified .st-btn {
+  -moz-flex: 1;
+-ms-flex: 1;
+-webkit-flex: 1;
+flex: 1;
+}#st-1 .st-btn[data-network='telegram'] {
+  background-color: #0088cc
+}
+
+
+
+#st-1 .st-btn[data-network='telegram'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='twitter'] {
+  background-color: #000000
+}
+
+#st-1 .st-btn[data-network='twitter'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='facebook'] {
+  background-color: #4267B2
+}
+
+#st-1 .st-btn[data-network='facebook'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='reddit'] {
+  background-color: #ff4500
+}
+
+#st-1 .st-btn[data-network='reddit'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='sharethis'] {
+  background-color: #95D03A
+}
+
+#st-1 .st-btn[data-network='sharethis'] > span {
+  color: #fff
+}#st-1 .st-btn[data-network='snapchat'] > span {
+  color: #333};
+</style></head>
+<body>
+    <div id="loader"></div>
+
+<div id="wrapper" data-id="19145" data-page="watch">
+
+  
+    <div id="header" class="header-home">
+
+
+        <div class="container">
+            <div id="mobile_menu">
+                
+                <a href='/'>
+                
+                    <i class="fa fa-home" aria-hidden="true"></i></a>
+            </div>
+
+     
+           
+            
+        
+            
+        </div>
+    </div>
+    </div>
+   
+
+    <div id="main-wrapper" class="layout-page layout-page-detail layout-page-watchtv">
+        <div id="ani_detail">
+            <div class="ani_detail-stage">
+               
+                  
+                    <div class="anis-watch-wrap">
+                        <div class="prebreadcrumb">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href='/' title='Home'>Home</a></li>
+                                   
+                                    </li>
+
+
+
+                                    <li class="breadcrumb-item dynamic-name active" >
+                                        Grand Blue Dreaming</li>
+                                </ol>
+
+
+
+
+                            </nav>
+                        </div>
+                       
+                                  
+                                        <section  id="iframe-embed">
+                                            <h2 class="title"></h2>
+                                            <div class="container">
+                                                <div id="video_player">
+                                                  <center>
+                                                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                                                        <iframe src="https://geo.dailymotion.com/player.html?video=x96d3z8"
+                                                          style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; border:none;"
+                                                          allowfullscreen
+                                                          title="Dailymotion Video Player"
+                                                          allow="web-share">
+                                                        </iframe>
+                                                      </div></center>
+                                                </div>
+                                                <div class="playlistBx">
+                                                    <div class="header">
+                                                        <div class="row">
+                                                            <span class="AllLessons">12 Episode</span>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="playlist" id="playlist">
+                                                        <a href="Grand Blue Dreaming.html"><li>Grand Blue Dreaming Ep 1 'Deep Blue'</li></a>
+                                                        <a href="Grand Blue Dreaming2.html"><li>Grand Blue Dreaming Ep 2 'Welcome Party'</li></a>
+                                                        <a href="Grand Blue Dreaming3.html"><li>Grand Blue Dreaming Ep 3 'A New World'</li></a>
+                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 4 'SOON'</li>
+                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 5 'SOON'</li>
+                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 6 'SOON'</li>
+                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 7 'SOON'</li>
+                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 8 'SOON'</li>
+                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 9 'SOON'</li>
+                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 10 'SOON'</li>
+                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 11 'SOON'</li>
+                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 12 'SOON'</li>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    
+                                </div>
+                             
+                       
+                          
+                            
+                                <div class="schedule-alert">
+                              
+                                </div>
+                            
+                            
+
+                            
+                  <!--          <div id="episodes-content"><div class="seasons-block ">1
+    <div id="detail-ss-list" class="detail-seasons">
+        <div class="detail-infor-content">
+            <div class="ss-choice">
+                <div class="ssc-list">
+                    <div id="ssc-list" class="ssc-button">
+                        <div class="ssc-label">List of parts:</div>
+                        
+                    </div>
+                </div>
+
+            
+               
+            </div>
+
+           
+                <div class="ss-list">
+                    
+                    <a title="The Man Who Became a Kaiju" class="ssl-item ep-item active" data-number="1" data-id="123344" href="Chainsaw man.html">
+                        <div class="ssli-order">1</div>
+                        <div class="ssli-detail">
+                            <div class="ep-name e-dynamic-name" data-jname="The Man Who Became a Kaiju" >Chainsaw Man, episode 1 'Dog & Chainsaw'</div>
+                        </div>
+                        <div class="ssli-btn">
+                            <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                        </div>
+                       
+                    </a>
+                    
+                    <a title="The Kaiju Who Defeats Kaiju" class="ssl-item ep-item" data-number="2" data-id="123472" href="Chainsaw man 2.html">
+                        <div class="ssli-order">2</div>
+                        <div class="ssli-detail">
+                            <div class="ep-name e-dynamic-name" data-jname="The Kaiju Who Defeats Kaiju" >Chainsaw Man,episode 2 'Arrival in Tokyo'</div>
+                        </div>
+                        <div class="ssli-btn">
+                            <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                        </div>
+                       
+                    </a>
+                    
+                    <a title="Episode 3" class="ssl-item ep-item" data-number="3" data-id="123747" href="Chainsaw man 3.html">
+                        <div class="ssli-order">3</div>
+                        <div class="ssli-detail">
+                            <div class="ep-name e-dynamic-name" data-jname="Episode 3" >Chainsaw Man, episode 3 'Meowy's'</div>
+                        </div>
+                        <div class="ssli-btn">
+                            <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                        </div>
+                       
+                    </a>
+                    
+                    <a title="Episode 3" class="ssl-item ep-item" data-number="4" data-id="123747" href="Chainsaw man 4.html">
+                        <div class="ssli-order">4</div>
+                        <div class="ssli-detail">
+                            <div class="ep-name e-dynamic-name" data-jname="Episode 3" >Chainsaw Man ,episode 4 'Rescue'</div>
+                        </div>
+                        <div class="ssli-btn">
+                            <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                        </div>
+
+                        <a title="Episode 3" class="ssl-item ep-item" data-number="5" data-id="123747" href="Chainsaw man 5.html">
+                            <div class="ssli-order">5</div>
+                            <div class="ssli-detail">
+                                <div class="ep-name e-dynamic-name" data-jname="Episode 3" >Chainsaw Man ,episode 5 'Gun Devil''</div>
+                            </div>
+                            <div class="ssli-btn">
+                                <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                            </div>
+
+
+                            <a title="Episode 3" class="ssl-item ep-item" data-number="6" data-id="123747" href="Chainsaw man 6.html">
+                                <div class="ssli-order">6</div>
+                                <div class="ssli-detail">
+                                    <div class="ep-name e-dynamic-name" data-jname="Episode 3" >Chainsaw Man ,episode 6 'Kill Denji'</div>
+                                </div>
+                                <div class="ssli-btn">
+                                    <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                                </div>
+                       
+                    </a>
+
+                </div>
+            
+        </div>
+    </div>
+   
+</div></div>-->
+                        
+                      
+                    </div>
+                </div>
+            </div>
+        
+       
+   
+        <div class="contai">
+            <div id="main-content">
+              
+                
+                <section class="block_area block_area_category">
+                    <div class="block_area-header">
+                        <div class="float-left bah-heading mr-4">
+                            <h1 class="cat-heading" style="text-shadow: 0 0 10px red, 0 0 30px red, 0 0 70px red;color: white;margin: 0 0  30px 20px;" >Recommended For You</h2>
+                        </div>
+                       
+                    </div>
+                    <div class="tab-content">
+                        <div class="block_area-content block_area-list film_list film_list-grid film_list-wfeature">
+              
+              
+                            <div class="film_list-wrap">
+
+
+                                
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>12</div>
+
+
+
+    <div class="tick-item tick-eps">12</div>
+
+            </div>
+        
+        <img src="../../img/slientmob.jpg" class="film-poster-img lazyload"  alt="The Soul of Soldier Master Part 2">
+        <a href="/anime/A Silent Voice/A Silent Voice.html" class="film-poster-ahref item-qtip" data-id="18317" data-hasqtip="0" oldtitle="The Soul of Soldier Master Part 2" title="" aria-describedby="qtip-0"><i class="fas fa-play"></i></a>
+    </div>
+
+    <div class="film-detail">
+        <h3 class="film-name"><a href="" title="The Soul of Soldier Master Part 2" class="dynamic-name" data-jname="Bing Zhu Qi Hun Part 2">A Slient Voice</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">Movie</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">16m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>13</div>
+
+
+
+    <div class="tick-item tick-eps">13</div>
+
+            </div>
+        
+        <img src="../../img/saw.jpg" class="film-poster-img lazyload" alt="My Senior Brother Is Too Steady">
+        <a href="/anime/chainsaw man/Chainsaw man.html" class="film-poster-ahref item-qtip" data-id="18318" data-hasqtip="1" oldtitle="My Senior Brother Is Too Steady" title="" aria-describedby="qtip-1"><i class="fas fa-play"></i></a>
+    </div>
+
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="My Senior Brother Is Too Steady" class="dynamic-name" data-jname="Shixiong A Shixiong">Grand Blue Dreaming</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">ONA</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">20m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>126</div>
+
+
+
+    <div class="tick-item tick-eps">126</div>
+
+            </div>
+        
+        <img src="../../img/windmob.jpg" class="film-poster-img lazyload" alt="The Love Story of My Immortal Dad">
+        <a href="/anime/wind breaker/wind breaker.html" class="film-poster-ahref item-qtip" data-id="18319" data-hasqtip="2" oldtitle="The Love Story of My Immortal Dad" title="" aria-describedby="qtip-2"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="The Love Story of My Immortal Dad" class="dynamic-name" data-jname="Xian Zun Naiba Dang Zhuixu">Wind Breaker</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">ONA</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">9m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>50</div>
+
+
+
+    <div class="tick-item tick-eps">50</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Hirogaru Sky! Precure">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18320" data-hasqtip="3" oldtitle="Hirogaru Sky! Precure" title="" aria-describedby="qtip-3"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Hirogaru Sky! Precure" class="dynamic-name" data-jname="Hirogaru Sky! Precure">Hirogaru Sky! Precure</a></h3>
+        <div class="fd-infor">
+            
+               
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">24m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
+
+
+    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>1</div>
+
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Goodbye, Don Glees!">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18321" data-hasqtip="4" oldtitle="Goodbye, Don Glees!" title="" aria-describedby="qtip-4"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Goodbye, Don Glees!" class="dynamic-name" data-jname="Goodbye, Don Glees!">Goodbye, Don Glees!</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">Movie</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">95m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
+
+
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Dragon Raja">
+        <a href="#"  data-id="18323" data-hasqtip="5" oldtitle="Dragon Raja" title="" aria-describedby="qtip-5"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Dragon Raja" class="dynamic-name" data-jname="Long Zu Episode 0">Dragon Raja</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">ONA</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">49m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
+
+
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Delicious Party♡Pretty Cure Movie">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18324" data-hasqtip="6" oldtitle="Delicious Party♡Pretty Cure Movie" title="" aria-describedby="qtip-6"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Delicious Party♡Pretty Cure Movie" class="dynamic-name" data-jname="Delicious Party♡Precure Movie: Yume Miru Oko-sama Lunch!">Delicious Party♡Pretty Cure Movie</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">Movie</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">64m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>48</div>
+
+
+
+    <div class="tick-item tick-eps">48</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Martial God Stream">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18326" data-hasqtip="7" oldtitle="Martial God Stream" title="" aria-describedby="qtip-7"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Martial God Stream" class="dynamic-name" data-jname="Xian Wu Cangqiong">Martial God Stream</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">ONA</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">7m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>28</div>
+
+
+
+    <div class="tick-item tick-eps">28</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Legend of Immortals 5th Season">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18328" data-hasqtip="8" oldtitle="Legend of Immortals 5th Season" title="" aria-describedby="qtip-8"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Legend of Immortals 5th Season" class="dynamic-name" data-jname="Xingchen Bian 5th Season">Legend of Immortals 5th Season</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">ONA</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">25m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+           
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
+
+
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Demon Slayer: Kimetsu no Yaiba – To the Swordsmith Village">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18335" data-hasqtip="9" oldtitle="Demon Slayer: Kimetsu no Yaiba – To the Swordsmith Village" title="" aria-describedby="qtip-9"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Demon Slayer: Kimetsu no Yaiba – To the Swordsmith Village" class="dynamic-name" data-jname="Kimetsu no Yaiba: To the Katanakaji no Sato-hen">Demon Slayer: Kimetsu no Yaiba – To the Swordsmith Village</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">Special</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">48m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+           
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>2</div>
+
+
+    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>2</div>
+
+
+    <div class="tick-item tick-eps">2</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Attack on Titan: The Final Season Part 3">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18329" data-hasqtip="10" oldtitle="Attack on Titan: The Final Season Part 3" title="" aria-describedby="qtip-10"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Attack on Titan: The Final Season Part 3" class="dynamic-name" data-jname="Shingeki no Kyojin: The Final Season - Kanketsu-hen">Attack on Titan: The Final Season Part 3</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">TV</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">61m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>25</div>
+
+
+
+    <div class="tick-item tick-eps">25</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Edens Zero 2nd Season">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18331" data-hasqtip="11" oldtitle="Edens Zero 2nd Season" title="" aria-describedby="qtip-11"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Edens Zero 2nd Season" class="dynamic-name" data-jname="Edens Zero 2nd Season">Edens Zero 2nd Season</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">TV</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">23m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+           
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>13</div>
+
+
+    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>13</div>
+
+
+    <div class="tick-item tick-eps">13</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Hell's Paradise">
+        <a href="#"film-poster-ahref item-qtip" data-id="18332" data-hasqtip="12" oldtitle="Hell's Paradise" title="" aria-describedby="qtip-12"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Hell's Paradise" class="dynamic-name" data-jname="Jigokuraku">Hell's Paradise</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">TV</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">22m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
+
+
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Buddy Daddies Recap">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18333" data-hasqtip="13" oldtitle="Buddy Daddies Recap" title="" aria-describedby="qtip-13"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Buddy Daddies Recap" class="dynamic-name" data-jname="Buddy Daddies Recap">Buddy Daddies Recap</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">Special</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">24m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>12</div>
+
+
+    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>12</div>
+
+
+    <div class="tick-item tick-eps">12</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="The Ancient Magus' Bride Season 2">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18338" data-hasqtip="14" oldtitle="The Ancient Magus' Bride Season 2" title="" aria-describedby="qtip-14"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="The Ancient Magus' Bride Season 2" class="dynamic-name" data-jname="Mahoutsukai no Yome Season 2">The Ancient Magus' Bride Season 2</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">TV</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">23m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>12</div>
+
+
+    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>12</div>
+
+
+    <div class="tick-item tick-eps">12</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Mashle: Magic and Muscles">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18339" data-hasqtip="15" oldtitle="Mashle: Magic and Muscles" title="" aria-describedby="qtip-15"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Mashle: Magic and Muscles" class="dynamic-name" data-jname="Mashle">Mashle: Magic and Muscles</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">TV</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">23m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>10</div>
+
+
+    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>10</div>
+
+
+    <div class="tick-item tick-eps">10</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Ranking of Kings: The Treasure Chest of Courage">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18340" data-hasqtip="16" oldtitle="Ranking of Kings: The Treasure Chest of Courage" title="" aria-describedby="qtip-16"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Ranking of Kings: The Treasure Chest of Courage" class="dynamic-name" data-jname="Ousama Ranking: Yuuki no Takarabako">Ranking of Kings: The Treasure Chest of Courage</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">TV</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">23m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>12</div>
+
+
+    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>12</div>
+
+
+    <div class="tick-item tick-eps">12</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="In Another World With My Smartphone 2">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18342" data-hasqtip="17" oldtitle="In Another World With My Smartphone 2" title="" aria-describedby="qtip-17"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="In Another World With My Smartphone 2" class="dynamic-name" data-jname="Isekai wa Smartphone to Tomo ni. 2">In Another World With My Smartphone 2</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">TV</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">23m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+
+                            </div>
+                           
+                        </div>
+                    </div>
+                </section>
+               
+            </div>
+          
+           
+        </div>
+    </div>
+
+  
+    
+   
+    
+
+
+
+
+<script >
+
+    var loader = document.getElementById("loader");
+    
+    window.addEventListener('load',function(){
+      loader.style.display = "none";
+    })
+    
+   
+        </script>
+
+
+  
+
+
+
+</body>
+
+</html>
