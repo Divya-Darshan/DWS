@@ -62,12 +62,6 @@
     
 }
 
-.link > ul{
-    margin:0 25% ;
-    list-style: none;
-
-}
-
 .link > ul > li{
     display: inline;
     margin:calc(.2526 * 4vh);
@@ -166,7 +160,6 @@
     list-style: none;
     color: #dcdee1;
     cursor: pointer;
-    border: 1px solid transparent;
     padding: 15px 20px;
     border-radius: 5px;
     }
@@ -200,7 +193,6 @@
     {
     pointer-events: none;
     background: var(--red);
-    border: 0.5px solid var(--white);
     }
     
     
@@ -392,7 +384,11 @@ flex: 1;
   color: #fff
 }#st-1 .st-btn[data-network='snapchat'] > span {
   color: #333};
-</style></head>
+
+
+
+</style>
+</head>
 <body>
     <div id="loader"></div>
 
@@ -405,14 +401,14 @@ flex: 1;
         <div class="container">
             <div id="mobile_menu">
                 
-                <a href='/'>
+                <a href="/index.html">
                 
                     <i class="fa fa-home" aria-hidden="true"></i></a>
             </div>
 
+            <a href="/index.html" style="font-family:Cairo, sans-serif;font-weight: 600;font-size: larger;top: 10px;position: relative;text-decoration: none;">DWS</a>
      
-           
-            
+                        
         
             
         </div>
@@ -452,7 +448,9 @@ flex: 1;
                                                 <div id="video_player">
                                                   <center>
                                                     <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
-                                                        <iframe src="https://geo.dailymotion.com/player.html?video=x96d3z8"
+                                                        <iframe
+                                                         id="vid"
+                                                         src="https://geo.dailymotion.com/player.html?video=x96d3z8"
                                                           style="width:100%; height:100%; position:absolute; left:0px; top:0px; overflow:hidden; border:none;"
                                                           allowfullscreen
                                                           title="Dailymotion Video Player"
@@ -467,18 +465,18 @@ flex: 1;
                                                         </div>
                                                     </div>
                                                     <ul class="playlist" id="playlist">
-                                                        <a href="Grand Blue Dreaming.html"><li>Grand Blue Dreaming Ep 1 'Deep Blue'</li></a>
-                                                        <a href="Grand Blue Dreaming2.html"><li>Grand Blue Dreaming Ep 2 'Welcome Party'</li></a>
-                                                        <a href="Grand Blue Dreaming3.html"><li>Grand Blue Dreaming Ep 3 'A New World'</li></a>
-                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 4 'SOON'</li>
-                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 5 'SOON'</li>
-                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 6 'SOON'</li>
-                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 7 'SOON'</li>
-                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 8 'SOON'</li>
-                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 9 'SOON'</li>
-                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 10 'SOON'</li>
-                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 11 'SOON'</li>
-                                                        <a href="#"></a><li>Grand Blue Dreaming Ep 12 'SOON'</li>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;"  onclick="gbd1()">Grand Blue Dreaming Ep 1 'Deep Blue'</button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;" onclick="gbd2()">Grand Blue Dreaming Ep 2 'Welcome Party'</button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;" onclick="gbd3()">Grand Blue Dreaming Ep 3 'A New World'</button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 4 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 5 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 6 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 7 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 8 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 9 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 10 'SOON'</button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 11 'SOON'</button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 12 'SOON'</button>
 
                                                     </ul>
                                                 </div>
@@ -779,36 +777,7 @@ flex: 1;
    
 </div>
 
-<div class="flw-item">
-    
-    <div class="film-poster">
-        
-        
-            <div class="tick ltr">
-                
 
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
-
-
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Dragon Raja">
-        <a href="#"  data-id="18323" data-hasqtip="5" oldtitle="Dragon Raja" title="" aria-describedby="qtip-5"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Dragon Raja" class="dynamic-name" data-jname="Long Zu Episode 0">Dragon Raja</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">ONA</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">49m</span>
-            
-        </div>
-    </div>
-   
-</div>
 
 <div class="flw-item">
     
@@ -822,403 +791,28 @@ flex: 1;
     <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
 
 
+    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>1</div>
+
 
             </div>
         
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Delicious Party♡Pretty Cure Movie">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18324" data-hasqtip="6" oldtitle="Delicious Party♡Pretty Cure Movie" title="" aria-describedby="qtip-6"><i class="fas fa-play"></i></a>
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Goodbye, Don Glees!">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18321" data-hasqtip="4" oldtitle="Goodbye, Don Glees!" title="" aria-describedby="qtip-4"><i class="fas fa-play"></i></a>
     </div>
     <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Delicious Party♡Pretty Cure Movie" class="dynamic-name" data-jname="Delicious Party♡Precure Movie: Yume Miru Oko-sama Lunch!">Delicious Party♡Pretty Cure Movie</a></h3>
+        <h3 class="film-name"><a href="#" title="Goodbye, Don Glees!" class="dynamic-name" data-jname="Goodbye, Don Glees!">Darling in the francsx! </a></h3>
         <div class="fd-infor">
             
                 <span class="fdi-item">Movie</span>
                 <span class="dot"></span>
-                <span class="fdi-item fdi-duration">64m</span>
+                <span class="fdi-item fdi-duration">95m</span>
             
         </div>
     </div>
    
 </div>
-
-<div class="flw-item">
     
-    <div class="film-poster">
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>48</div>
-
-
-
-    <div class="tick-item tick-eps">48</div>
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Martial God Stream">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18326" data-hasqtip="7" oldtitle="Martial God Stream" title="" aria-describedby="qtip-7"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Martial God Stream" class="dynamic-name" data-jname="Xian Wu Cangqiong">Martial God Stream</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">ONA</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">7m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-<div class="flw-item">
     
-    <div class="film-poster">
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>28</div>
-
-
-
-    <div class="tick-item tick-eps">28</div>
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Legend of Immortals 5th Season">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18328" data-hasqtip="8" oldtitle="Legend of Immortals 5th Season" title="" aria-describedby="qtip-8"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Legend of Immortals 5th Season" class="dynamic-name" data-jname="Xingchen Bian 5th Season">Legend of Immortals 5th Season</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">ONA</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">25m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-<div class="flw-item">
-    
-    <div class="film-poster">
-        
-           
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
-
-
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Demon Slayer: Kimetsu no Yaiba – To the Swordsmith Village">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18335" data-hasqtip="9" oldtitle="Demon Slayer: Kimetsu no Yaiba – To the Swordsmith Village" title="" aria-describedby="qtip-9"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Demon Slayer: Kimetsu no Yaiba – To the Swordsmith Village" class="dynamic-name" data-jname="Kimetsu no Yaiba: To the Katanakaji no Sato-hen">Demon Slayer: Kimetsu no Yaiba – To the Swordsmith Village</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">Special</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">48m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-<div class="flw-item">
-    
-    <div class="film-poster">
-        
-           
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>2</div>
-
-
-    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>2</div>
-
-
-    <div class="tick-item tick-eps">2</div>
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Attack on Titan: The Final Season Part 3">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18329" data-hasqtip="10" oldtitle="Attack on Titan: The Final Season Part 3" title="" aria-describedby="qtip-10"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Attack on Titan: The Final Season Part 3" class="dynamic-name" data-jname="Shingeki no Kyojin: The Final Season - Kanketsu-hen">Attack on Titan: The Final Season Part 3</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">TV</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">61m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-<div class="flw-item">
-    
-    <div class="film-poster">
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>25</div>
-
-
-
-    <div class="tick-item tick-eps">25</div>
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Edens Zero 2nd Season">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18331" data-hasqtip="11" oldtitle="Edens Zero 2nd Season" title="" aria-describedby="qtip-11"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Edens Zero 2nd Season" class="dynamic-name" data-jname="Edens Zero 2nd Season">Edens Zero 2nd Season</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">TV</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">23m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-<div class="flw-item">
-    
-    <div class="film-poster">
-        
-           
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>13</div>
-
-
-    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>13</div>
-
-
-    <div class="tick-item tick-eps">13</div>
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Hell's Paradise">
-        <a href="#"film-poster-ahref item-qtip" data-id="18332" data-hasqtip="12" oldtitle="Hell's Paradise" title="" aria-describedby="qtip-12"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Hell's Paradise" class="dynamic-name" data-jname="Jigokuraku">Hell's Paradise</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">TV</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">22m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-<div class="flw-item">
-    
-    <div class="film-poster">
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
-
-
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Buddy Daddies Recap">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18333" data-hasqtip="13" oldtitle="Buddy Daddies Recap" title="" aria-describedby="qtip-13"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Buddy Daddies Recap" class="dynamic-name" data-jname="Buddy Daddies Recap">Buddy Daddies Recap</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">Special</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">24m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-<div class="flw-item">
-    
-    <div class="film-poster">
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>12</div>
-
-
-    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>12</div>
-
-
-    <div class="tick-item tick-eps">12</div>
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="The Ancient Magus' Bride Season 2">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18338" data-hasqtip="14" oldtitle="The Ancient Magus' Bride Season 2" title="" aria-describedby="qtip-14"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="The Ancient Magus' Bride Season 2" class="dynamic-name" data-jname="Mahoutsukai no Yome Season 2">The Ancient Magus' Bride Season 2</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">TV</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">23m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-<div class="flw-item">
-    
-    <div class="film-poster">
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>12</div>
-
-
-    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>12</div>
-
-
-    <div class="tick-item tick-eps">12</div>
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Mashle: Magic and Muscles">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18339" data-hasqtip="15" oldtitle="Mashle: Magic and Muscles" title="" aria-describedby="qtip-15"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Mashle: Magic and Muscles" class="dynamic-name" data-jname="Mashle">Mashle: Magic and Muscles</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">TV</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">23m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-<div class="flw-item">
-    
-    <div class="film-poster">
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>10</div>
-
-
-    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>10</div>
-
-
-    <div class="tick-item tick-eps">10</div>
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Ranking of Kings: The Treasure Chest of Courage">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18340" data-hasqtip="16" oldtitle="Ranking of Kings: The Treasure Chest of Courage" title="" aria-describedby="qtip-16"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="Ranking of Kings: The Treasure Chest of Courage" class="dynamic-name" data-jname="Ousama Ranking: Yuuki no Takarabako">Ranking of Kings: The Treasure Chest of Courage</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">TV</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">23m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-<div class="flw-item">
-    
-    <div class="film-poster">
-        
-        
-            <div class="tick ltr">
-                
-
-
-    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>12</div>
-
-
-    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>12</div>
-
-
-    <div class="tick-item tick-eps">12</div>
-
-            </div>
-        
-        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="In Another World With My Smartphone 2">
-        <a href="#" class="film-poster-ahref item-qtip" data-id="18342" data-hasqtip="17" oldtitle="In Another World With My Smartphone 2" title="" aria-describedby="qtip-17"><i class="fas fa-play"></i></a>
-    </div>
-    <div class="film-detail">
-        <h3 class="film-name"><a href="#" title="In Another World With My Smartphone 2" class="dynamic-name" data-jname="Isekai wa Smartphone to Tomo ni. 2">In Another World With My Smartphone 2</a></h3>
-        <div class="fd-infor">
-            
-                <span class="fdi-item">TV</span>
-                <span class="dot"></span>
-                <span class="fdi-item fdi-duration">23m</span>
-            
-        </div>
-    </div>
-   
-</div>
-
-
                             </div>
                            
                         </div>
@@ -1235,7 +829,7 @@ flex: 1;
     
    
     
-
+<script src="main.js" ></script>
 
 
 
