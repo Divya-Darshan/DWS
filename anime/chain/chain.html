@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Chainsaw Man</title>
+<meta http-equiv="content-language" content="en">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-7797892639466026"
+     crossorigin="anonymous"></script>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+     <link rel="shortcut icon" href="../../img/dwsico.png" type="image/x-icon">
+
+ <!-- Shaka Player UI compiled library: -->
+ <script src="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.5/shaka-player.ui.min.js"></script>
+ <!-- Shaka Player UI compiled library default CSS: -->
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/shaka-player/4.12.5/controls.min.css">
+
+<!--Begin: Stylesheet-->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+<link rel="stylesheet" href="style.css">
+<!--End: Stylesheet-->
+<meta name="google-adsense-account" content="ca-pub-7797892639466026">
+
+
+<style type="text/css">
+*{
+    margin: 0 0 0 0; 
+    padding: 0;
+    box-sizing: border-box;
+    
+    }
+    
+    :root{
+        --red:#362c2c9e;
+        --black:#000000;
+        --light-color:#181818;
+        --box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+        --font: calc(.2652 * 8vh);
+        --white:white;
+    }
+ html{   
+    scroll-padding-top:5.5rem;
+    scroll-behavior:smooth;
+}
+
+
+.link > ul > li > a > img{
+    height: 10%;
+    width: 10%;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgb(223, 223, 223);
+    transition: 0.5s;
+}
+
+
+.link > ul > li > a > img:hover{
+  transition: 0.5s;
+    height: 10%;
+    width: 10%;
+    border-radius: 10%;
+    box-shadow: 0 0 10px rgb(255, 0, 0);
+    
+}
+
+.link > ul > li{
+    display: inline;
+    margin:calc(.2526 * 4vh);
+}
+
+    #loader{
+        background: #000 url("../vid/loder.gif") no-repeat center center;
+        background-position: center;
+        background-size: cover;
+        height: 100vh;
+        width: 100%;
+        opacity: .6;
+        position: fixed;
+        z-index: 100000;
+    }
+    
+
+    li
+    {
+    list-style: none;
+    }
+    section
+    {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+    
+    }
+
+    
+    .title
+    {
+    font-size: 20px;
+    font-weight: 600;
+    color: #dcdee1;
+    text-align: left;
+    width: 100%;
+    margin-bottom: 10px;
+    }
+    .container
+    {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    overflow: hidden;
+    padding: 0;
+    /* border: 2px solid red; */
+    }
+    .container container
+    {
+    position: relative;
+    width: 50%;
+    height: 80%;
+    overflow: hidden;
+    outline: none;
+    }
+    
+    .playlistBx
+    {
+    position: relative;
+    height: 100%;
+    margin: 0 10px 0 10px;
+    /* border: 2px solid green; */
+    }
+    .playlist
+    {
+    position: absolute;
+    width: 100%;
+    height: calc(100% - 40px);
+    overflow-y: scroll;
+    border-top: 1px solid #dcdee1;
+    }
+    .playlist::-webkit-scrollbar
+    {
+    width: 0px;
+    }
+    .playlistBx .row .AllLessons
+    {
+    display: block;
+    text-align: left;
+    color: #dcdee1;
+    font-size: 15px;
+    font-weight: 700;
+    margin-left: 40px;
+    line-height: 40px;
+    }
+    .playlist li
+    {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+    color: #dcdee1;
+    cursor: pointer;
+    padding: 15px 20px;
+    border-radius: 5px;
+    }
+    .playlist li:hover
+    {
+    border: 0.5px solid var(--red);
+    }
+    .playlist li .row span
+    {
+    font-size: 15px;
+    font-weight: 400;
+    color: #dcdee1;
+    text-decoration: none;
+    display: inline-block;
+    text-align: left;
+    }
+  
+    .playlist li.playing .row span
+    {
+    color: #fff;
+    }
+    .playlist li span.duration
+    {
+    font-size: 15px;
+    font-weight: 400;
+    display: inline-block;
+    color: #dcdee1;
+    text-align: right;
+    }
+    .playlist li.playing
+    {
+    pointer-events: none;
+    background: var(--red);
+    }
+    
+    
+    
+    
+    
+    @media(max-width: 1092px){
+    
+    .container
+    {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        overflow: hidden;
+    }
+ 
+    .title{
+        display: none;
+    }
+    .playlistBx
+    {
+        height: 380px;
+        margin-top: 10px;
+    }
+    .playlist
+    {
+        position: absolute;
+        width: 100%;
+        height: calc(100% - 40px);
+        overflow-y: scroll;
+    }
+    }
+
+
+
+#st-1 {
+  font-family: "Helvetica Neue", Verdana, Helvetica, Arial, sans-serif;;
+  direction: ltr;
+  display: block;
+  opacity: 1;
+  text-align: center;
+  z-index: 94034;
+}
+#st-1.st-animated {
+  -moz-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; -ms-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; -o-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; -webkit-transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in; transition: o 0.2s ease-in, p 0.2s ease-in, a 0.2s ease-in, c 0.2s ease-in, i 0.2s ease-in, t 0.2s ease-in, y 0.2s ease-in;
+}
+#st-1.st-hidden {
+  opacity: 0;
+}
+
+#st-1.st-preview {
+  display: none!important;
+  opacity: 0!important;
+}
+#st-1.st-hide {
+  display: none;
+}
+#st-1 .st-btn {
+  -moz-box-sizing: border-box;
+-webkit-box-sizing: border-box;
+box-sizing: border-box;
+  -moz-transition: opacity 0.2s ease-in, top 0.2s ease-in; -ms-transition: opacity 0.2s ease-in, top 0.2s ease-in; -o-transition: opacity 0.2s ease-in, top 0.2s ease-in; -webkit-transition: opacity 0.2s ease-in, top 0.2s ease-in; transition: opacity 0.2s ease-in, top 0.2s ease-in;
+  -moz-border-radius: 20px;
+-webkit-border-radius: 20px;
+border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 12px;
+  height: 32px;
+  line-height: 32px;
+  margin-right: 8px;
+  padding: 0 10px;
+  position: relative;
+  text-align: center;
+  top: 0;
+  vertical-align: top;
+  white-space: nowrap;
+}
+#st-1 .st-btn:last-child {
+  margin-right: 0;
+}
+#st-1 .st-btn > svg {
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 8px;
+  vertical-align: top;
+}
+#st-1 .st-btn > img {
+  display: inline-block;
+  height: 16px;
+  width: 16px;
+  position: relative;
+  top: 8px;
+  vertical-align: top;
+}
+#st-1 .st-btn > span {
+  -moz-transition: all 0.2s ease-in; -ms-transition: all 0.2s ease-in; -o-transition: all 0.2s ease-in; -webkit-transition: all 0.2s ease-in; transition: all 0.2s ease-in;
+  color: #fff;
+  display: inline-block;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  min-width: 60px;
+  opacity: 1;
+  padding: 0 6px;
+  position: relative;
+  vertical-align: top;
+}
+#st-1.st-has-labels .st-btn {
+  min-width: 120px;
+}
+#st-1.st-has-labels .st-btn.st-remove-label {
+  min-width: 50px;
+}
+#st-1.st-has-labels .st-btn.st-remove-label > span {
+  display: none;
+}
+#st-1.st-has-labels .st-btn.st-hide-label > span {
+  display: none;
+}
+#st-1 .st-total {
+  color: #555;
+  display: inline-block;
+  font-weight: 500;
+  line-height: 12px;
+  margin-right: 0;
+  max-width: 80px;
+  padding: 4px 8px;
+  text-align: center;
+}
+#st-1 .st-total.st-hidden {
+  display: none;
+}
+#st-1 .st-total > span {
+  font-size: 16px;
+  line-height: 17px;
+  display: block;
+  padding: 0;
+}
+#st-1 .st-total > span.st-shares {
+  font-size: 9px;
+  line-height: 9px;
+}
+#st-1.st-justified {
+  display: flex;
+  text-align: center;
+}
+#st-1.st-justified .st-btn {
+  -moz-flex: 1;
+-ms-flex: 1;
+-webkit-flex: 1;
+flex: 1;
+}#st-1 .st-btn[data-network='telegram'] {
+  background-color: #0088cc
+}
+
+
+
+#st-1 .st-btn[data-network='telegram'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='twitter'] {
+  background-color: #000000
+}
+
+#st-1 .st-btn[data-network='twitter'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='facebook'] {
+  background-color: #4267B2
+}
+
+#st-1 .st-btn[data-network='facebook'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='reddit'] {
+  background-color: #ff4500
+}
+
+#st-1 .st-btn[data-network='reddit'] > span {
+  color: #fff
+}
+#st-1 .st-btn[data-network='sharethis'] {
+  background-color: #95D03A
+}
+
+#st-1 .st-btn[data-network='sharethis'] > span {
+  color: #fff
+}#st-1 .st-btn[data-network='snapchat'] > span {
+  color: #333};
+
+
+
+</style>
+</head>
+<body>
+    <div id="loader"></div>
+
+<div id="wrapper" data-id="19145" data-page="watch">
+
+  
+    <div id="header" class="header-home">
+
+
+        <div class="container">
+            <div id="mobile_menu">
+                
+                <a href="/index.html">
+                
+                    <i class="fa fa-home" aria-hidden="true"></i></a>
+            </div>
+
+            <a href="/index.html" style="font-family:Cairo, sans-serif;font-weight: 600;font-size: larger;top: 10px;position: relative;text-decoration: none;">DWS</a>
+     
+                        
+        
+            
+        </div>
+    </div>
+    </div>
+   
+
+    <div id="main-wrapper" class="layout-page layout-page-detail layout-page-watchtv">
+        <div id="ani_detail">
+            <div class="ani_detail-stage">
+               
+                  
+                    <div class="anis-watch-wrap">
+                        <div class="prebreadcrumb">
+                            <nav aria-label="breadcrumb">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href='/' title='Home'>Home</a></li>
+                                   
+                                    </li>
+
+
+
+                                    <li class="breadcrumb-item dynamic-name active" >
+                                        Grand Blue Dreaming</li>
+                                </ol>
+
+
+
+
+                            </nav>
+                        </div>
+                       
+                                  
+                                        <section  id="iframe-embed">
+                                            <h2 class="title"></h2>
+                                            <div class="container">
+                                                <div id="video_player">
+                                                  <center>
+                                                    <div style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden;">
+                                                       
+
+           
+                                                      </div></center>
+                                                </div>
+                                                <div class="playlistBx">
+                                                    <div class="header">
+                                                        <div class="row">
+                                                            <span class="AllLessons">12 Episode</span>
+                                                        </div>
+                                                    </div>
+                                                    <ul class="playlist" id="playlist">
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;"  onclick="gbd1()">Grand Blue Dreaming Ep 1 'Deep Blue'</button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;" onclick="gbd2()">Grand Blue Dreaming Ep 2 'Welcome'</button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;" onclick="gbd3()">Grand Blue Dreaming Ep 3 'A New World'</button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 4 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 5 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 6 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 7 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 8 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 9 'SOON' </button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 10 'SOON'</button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 11 'SOON'</button>
+                                                        <button class="btn" style="margin:5px;color:white;border: none;outline: white;box-shadow: none;">Grand Blue Dreaming Ep 12 'SOON'</button>
+
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </section>
+                                    
+                                </div>
+                             
+                       
+                          
+                            
+                                <div class="schedule-alert">
+                              
+                                </div>
+                            
+                            
+
+                            
+                  <!--          <div id="episodes-content"><div class="seasons-block ">1
+    <div id="detail-ss-list" class="detail-seasons">
+        <div class="detail-infor-content">
+            <div class="ss-choice">
+                <div class="ssc-list">
+                    <div id="ssc-list" class="ssc-button">
+                        <div class="ssc-label">List of parts:</div>
+                        
+                    </div>
+                </div>
+
+            
+               
+            </div>
+
+           
+                <div class="ss-list">
+                    
+                    <a title="The Man Who Became a Kaiju" class="ssl-item ep-item active" data-number="1" data-id="123344" href="Chainsaw man.html">
+                        <div class="ssli-order">1</div>
+                        <div class="ssli-detail">
+                            <div class="ep-name e-dynamic-name" data-jname="The Man Who Became a Kaiju" >Chainsaw Man, episode 1 'Dog & Chainsaw'</div>
+                        </div>
+                        <div class="ssli-btn">
+                            <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                        </div>
+                       
+                    </a>
+                    
+                    <a title="The Kaiju Who Defeats Kaiju" class="ssl-item ep-item" data-number="2" data-id="123472" href="Chainsaw man 2.html">
+                        <div class="ssli-order">2</div>
+                        <div class="ssli-detail">
+                            <div class="ep-name e-dynamic-name" data-jname="The Kaiju Who Defeats Kaiju" >Chainsaw Man,episode 2 'Arrival in Tokyo'</div>
+                        </div>
+                        <div class="ssli-btn">
+                            <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                        </div>
+                       
+                    </a>
+                    
+                    <a title="Episode 3" class="ssl-item ep-item" data-number="3" data-id="123747" href="Chainsaw man 3.html">
+                        <div class="ssli-order">3</div>
+                        <div class="ssli-detail">
+                            <div class="ep-name e-dynamic-name" data-jname="Episode 3" >Chainsaw Man, episode 3 'Meowy's'</div>
+                        </div>
+                        <div class="ssli-btn">
+                            <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                        </div>
+                       
+                    </a>
+                    
+                    <a title="Episode 3" class="ssl-item ep-item" data-number="4" data-id="123747" href="Chainsaw man 4.html">
+                        <div class="ssli-order">4</div>
+                        <div class="ssli-detail">
+                            <div class="ep-name e-dynamic-name" data-jname="Episode 3" >Chainsaw Man ,episode 4 'Rescue'</div>
+                        </div>
+                        <div class="ssli-btn">
+                            <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                        </div>
+
+                        <a title="Episode 3" class="ssl-item ep-item" data-number="5" data-id="123747" href="Chainsaw man 5.html">
+                            <div class="ssli-order">5</div>
+                            <div class="ssli-detail">
+                                <div class="ep-name e-dynamic-name" data-jname="Episode 3" >Chainsaw Man ,episode 5 'Gun Devil''</div>
+                            </div>
+                            <div class="ssli-btn">
+                                <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                            </div>
+
+
+                            <a title="Episode 3" class="ssl-item ep-item" data-number="6" data-id="123747" href="Chainsaw man 6.html">
+                                <div class="ssli-order">6</div>
+                                <div class="ssli-detail">
+                                    <div class="ep-name e-dynamic-name" data-jname="Episode 3" >Chainsaw Man ,episode 6 'Kill Denji'</div>
+                                </div>
+                                <div class="ssli-btn">
+                                    <div class="btn btn-circle"><i class="fas fa-play"></i></div>
+                                </div>
+                       
+                    </a>
+
+                </div>
+            
+        </div>
+    </div>
+   
+</div></div>-->
+                        
+                      
+                    </div>
+                </div>
+            </div>
+        
+       
+   
+        <div class="contai">
+            <div id="main-content">
+              
+                
+                <section class="block_area block_area_category">
+                    <div class="block_area-header">
+                        <div class="float-left bah-heading mr-4">
+                            <h1 class="cat-heading" style="text-shadow: 0 0 10px red, 0 0 30px red, 0 0 70px red;color: white;margin: 0 0  30px 20px;" >Recommended For You</h2>
+                        </div>
+                       
+                    </div>
+                    <div class="tab-content">
+                        <div class="block_area-content block_area-list film_list film_list-grid film_list-wfeature">
+              
+              
+                            <div class="film_list-wrap">
+
+
+                                
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>12</div>
+
+
+
+    <div class="tick-item tick-eps">12</div>
+
+            </div>
+        
+        <img src="../../img/slientmob.jpg" class="film-poster-img lazyload"  alt="The Soul of Soldier Master Part 2">
+        <a href="/anime/A Silent Voice/A Silent Voice.html" class="film-poster-ahref item-qtip" data-id="18317" data-hasqtip="0" oldtitle="The Soul of Soldier Master Part 2" title="" aria-describedby="qtip-0"><i class="fas fa-play"></i></a>
+    </div>
+
+    <div class="film-detail">
+        <h3 class="film-name"><a href="" title="The Soul of Soldier Master Part 2" class="dynamic-name" data-jname="Bing Zhu Qi Hun Part 2">A Slient Voice</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">Movie</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">16m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>13</div>
+
+
+
+    <div class="tick-item tick-eps">13</div>
+
+            </div>
+        
+        <img src="../../img/saw.jpg" class="film-poster-img lazyload" alt="My Senior Brother Is Too Steady">
+        <a href="/anime/chainsaw man/Chainsaw man.html" class="film-poster-ahref item-qtip" data-id="18318" data-hasqtip="1" oldtitle="My Senior Brother Is Too Steady" title="" aria-describedby="qtip-1"><i class="fas fa-play"></i></a>
+    </div>
+
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="My Senior Brother Is Too Steady" class="dynamic-name" data-jname="Shixiong A Shixiong">Grand Blue Dreaming</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">ONA</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">20m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>126</div>
+
+
+
+    <div class="tick-item tick-eps">126</div>
+
+            </div>
+        
+        <img src="../../img/windmob.jpg" class="film-poster-img lazyload" alt="The Love Story of My Immortal Dad">
+        <a href="/anime/wind breaker/wind breaker.html" class="film-poster-ahref item-qtip" data-id="18319" data-hasqtip="2" oldtitle="The Love Story of My Immortal Dad" title="" aria-describedby="qtip-2"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="The Love Story of My Immortal Dad" class="dynamic-name" data-jname="Xian Zun Naiba Dang Zhuixu">Wind Breaker</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">ONA</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">9m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>50</div>
+
+
+
+    <div class="tick-item tick-eps">50</div>
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Hirogaru Sky! Precure">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18320" data-hasqtip="3" oldtitle="Hirogaru Sky! Precure" title="" aria-describedby="qtip-3"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Hirogaru Sky! Precure" class="dynamic-name" data-jname="Hirogaru Sky! Precure">Hirogaru Sky! Precure</a></h3>
+        <div class="fd-infor">
+            
+               
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">24m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
+
+
+    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>1</div>
+
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Goodbye, Don Glees!">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18321" data-hasqtip="4" oldtitle="Goodbye, Don Glees!" title="" aria-describedby="qtip-4"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Goodbye, Don Glees!" class="dynamic-name" data-jname="Goodbye, Don Glees!">Goodbye, Don Glees!</a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">Movie</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">95m</span>
+            
+        </div>
+    </div>
+   
+</div>
+
+
+
+<div class="flw-item">
+    
+    <div class="film-poster">
+        
+        
+            <div class="tick ltr">
+                
+
+
+    <div class="tick-item tick-sub"><i class="fas fa-closed-captioning mr-1"></i>1</div>
+
+
+    <div class="tick-item tick-dub"><i class="fas fa-microphone mr-1"></i>1</div>
+
+
+            </div>
+        
+        <img src="../../img/soonmob.jpg" class="film-poster-img lazyload" alt="Goodbye, Don Glees!">
+        <a href="#" class="film-poster-ahref item-qtip" data-id="18321" data-hasqtip="4" oldtitle="Goodbye, Don Glees!" title="" aria-describedby="qtip-4"><i class="fas fa-play"></i></a>
+    </div>
+    <div class="film-detail">
+        <h3 class="film-name"><a href="#" title="Goodbye, Don Glees!" class="dynamic-name" data-jname="Goodbye, Don Glees!">Darling in the francsx! </a></h3>
+        <div class="fd-infor">
+            
+                <span class="fdi-item">Movie</span>
+                <span class="dot"></span>
+                <span class="fdi-item fdi-duration">95m</span>
+            
+        </div>
+    </div>
+   
+</div>
+    
+    
+                            </div>
+                           
+                        </div>
+                    </div>
+                </section>
+               
+            </div>
+          
+           
+        </div>
+    </div>
+
+  
+    
+   
+    
+<script src="main.js" ></script>
+
+
+
+<script >
+
+    var loader = document.getElementById("loader");
+    
+    window.addEventListener('load',function(){
+      loader.style.display = "none";
+    })
+
+    
+const manifestUri ='sev.mpd';
+
+async function init() {
+  // When using the UI, the player is made automatically by the UI object.
+  const video = document.getElementById('video');
+  const ui = video['ui'];
+  const controls = ui.getControls();
+  const player = controls.getPlayer();
+
+  // Attach player and UI to the window to make it easy to access in the JS console.
+  window.player = player;
+  window.ui = ui;
+
+  // Listen for error events.
+  player.addEventListener('error', onPlayerErrorEvent);
+  controls.addEventListener('error', onUIErrorEvent);
+
+  // Try to load a manifest.
+  // This is an asynchronous process.
+  try {
+    await player.load(manifestUri);
+    // This runs if the asynchronous load is successful.
+    console.log('The video has now been loaded!');
+  } catch (error) {
+    onPlayerError(error);
+  }
+}
+
+function onPlayerErrorEvent(errorEvent) {
+  // Extract the shaka.util.Error object from the event.
+  onPlayerError(event.detail);
+}
+
+function onPlayerError(error) {
+  // Handle player error
+  console.error('Error code', error.code, 'object', error);
+}
+
+function onUIErrorEvent(errorEvent) {
+  // Extract the shaka.util.Error object from the event.
+  onPlayerError(event.detail);
+}
+
+function initFailed(errorEvent) {
+  // Handle the failure to load; errorEvent.detail.reasonCode has a
+  // shaka.ui.FailReasonCode describing why.
+  console.error('Unable to load the UI library!');
+}
+
+// Listen to the custom shaka-ui-loaded event, to wait until the UI is loaded.
+document.addEventListener('shaka-ui-loaded', init);
+// Listen to the custom shaka-ui-load-failed event, in case Shaka Player fails
+// to load (e.g. due to lack of browser support).
+document.addEventListener('shaka-ui-load-failed', initFailed);
+    
+   
+        </script>
+
+
+  
+
+
+
+</body>
+
+</html>
