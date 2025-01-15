@@ -4,65 +4,88 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="shortcut icon" href="img/dwsico.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        .custom-button {
-            font-family:sans-serif;
-            text-decoration: none;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  padding: 11px 11px;
-  font-size: 18px;
-  font-weight: 500;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  outline: none;
-  user-select: none;
-  color: #ffffff;
-  border-top-width: 1px;
-  border-right-width: 1px;
-  border-bottom-width: 1px;
-  border-left-width: 1px;
-  border-top-style: solid;
-  border-right-style: solid;
-  border-bottom-style: solid;
-  border-left-style: solid;
-  border-top-color: #000000;
-  border-right-color: #000000;
-  border-bottom-color: #000000;
-  border-left-color: #000000;
-  border-top-left-radius: 4px;
-  border-top-right-radius: 4px;
-  border-bottom-right-radius: 4px;
-  border-bottom-left-radius: 4px;
-  background-color: #3b82f6;
-  box-shadow: 0 0 20px black;
-}
-
-.custom-button:hover {
-  transition: all 0.3s ease;
-  transform: translateY(-7px);
-}
+             
 body{
-    background: url(https://i.pinimg.com/originals/0f/73/ca/0f73ca37bf6bf6925542a00e4f529666.jpg) no-repeat;
+    background: url(https://i.pinimg.com/originals/0f/73/ca/0f73ca37bf6bf6925542a00e4f529666.jpg) ;
     background-position: center;
     background-size: cover;
-    overflow:hidden;
+    overflow: hidden;
+    height: 100vh;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-center{
- display: flex;
- align-items: center;
- justify-content: center;
- height: 100vh;
+.main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+    top: 50px;
 }
+
+.container{
+   
+    height: 200px;
+    padding: 10px 10px;
+    border-radius: 20px;
+    background-color: #ffffff8e;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.475);
+}
+
+input{
+    border:none;
+    outline:none;
+    background-color: transparent;
+    font-size: larger;
+}
+
+.con{
+    background-color:white;
+    padding:10px 30px;
+    border-radius:10px;
+    box-shadow: 0 0 20px rgb(96, 96, 96);
+    margin: 30px;
+}
+
+a{
+    text-decoration: none;
+    color: rgb(255, 0, 111);
+}
+
+p{
+    overflow: hidden;
+    margin: 10px;
+    color: aliceblue;
+    background-color: rgba(255, 0, 132, 0.679);
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.464);
+}
+
+
+
+
 
     </style>
 </head>
 <body>
-    <center>
-    <a href="http://dreamwishstudio.netlify.app" class="custom-button">Click ME!</a>
-    </center>
+
+<div class="main">
+    <div class="container">
+
+        <div class="con">
+<form action="https://dreamwishstudio.netlify.app">
+            <input type="text" placeholder="Search anime..."> 
+</form>
+        </div>
+
+        <p>
+            DWS or aka Dream Wish Studio is non-profitale anime streaming organization, who are people interested in anime dubing by the language Tamil.The organization is not a private,you can be a part of us.        </p>
+
+    </div>
+</div>
 </body>
 </html>
