@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Changer</title>
+    <style>
+        body {
+            transition: background-image 1s ease-in-out, background-color 1s ease-in-out;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+
+<script>
+    // Array of background image URLs
+    const backgrounds = [
+        "https://r4.wallpaperflare.com/wallpaper/534/826/507/lucy-edgerunners-cyberpunk-edgerunners-anime-anime-girls-cyberpunk-hd-wallpaper-c2b757ad88f9c91bf799755c31d33f93.jpg",
+        "https://i.pinimg.com/originals/0f/73/ca/0f73ca37bf6bf6925542a00e4f529666.jpg"
+    ];
+
+    let currentIndex = 0;
+
+    // Function to change background
+    function changeBackground() {
+        document.body.style.backgroundImage = `url(${backgrounds[currentIndex]})`;
+        currentIndex = (currentIndex + 1) % backgrounds.length; // Cycle through images
+    }
+
+    // Change background every 5 seconds
+    setInterval(changeBackground, 5000);
+    
+    // Set the initial background
+    changeBackground();
+</script>
+
+</body>
+</html>
