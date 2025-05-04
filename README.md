@@ -5,6 +5,11 @@
 Welcome to the **official GitHub repository** for the Dream Wish Studio website! 💫  
 We're a passionate team of creators bringing *anime-style worlds*, *colorful characters*, and *magical stories* to life! 🖌️🎮
 
+⚠️ **Update:**  
+> ❌ *This project has been officially discontinued.* 😢  
+Due to internal challenges faced by the team, development of this website has been halted.  
+But fear not! Our dreams live on through other creative ventures! 🌠🦋
+
 ---
 
 ## 🌸 About Dream Wish Studio
@@ -36,75 +41,5 @@ Check it out here 👉 [Visit Website](#) *(Link your deployed website here)*
 ---
 
 ## 💾 Repository Content
-
-
----
-
-## 🧙‍♀️ Tech Stack
-
-- 🔥 HTML5 + CSS3 + JS
-- 🧩 Godot Engine (for integrated games)
-- 🎨 Hand-drawn assets & animation
-- 💖 Designed with heart & soul (and a bit of stardust)
-
----
-
-## 🌟 Join the Journey!
-
-💬 Got ideas, fanart, or just want to say *konnichiwa~*?  
-We’d love to connect!
-
-- 🐦 Twitter: [@dreamwishstudio](#)
-- 🎥 YouTube: [DWS Channel](#)
-- 📧 Email: contact@dreamwish.studio
-
----
-
-## 💌 Credits
-
-Built by the **Dream Wish Studio Team** with sparkles, coffee, and tons of anime inspiration! ☕✨
-
-> 📝 "*Even the tiniest dream can change the world...*" - DWS
-
----
-
-## 🐾 Arigatou~!
-
-Thanks for visiting! 🫶 Feel free to ⭐ star this repo and spread the word!
-
-
----
-
-## 🧙‍♀️ Tech Stack
-
-- 🔥 HTML5 + CSS3 + JS
-- 🧩 Godot Engine (for integrated games)
-- 🎨 Hand-drawn assets & animation
-- 💖 Designed with heart & soul (and a bit of stardust)
-
----
-
-## 🌟 Join the Journey!
-
-💬 Got ideas, fanart, or just want to say *konnichiwa~*?  
-We’d love to connect!
-
-- 🐦 Twitter: [@dreamwishstudio](#)
-- 🎥 YouTube: [DWS Channel](#)
-- 📧 Email: contact@dreamwish.studio
-
----
-
-## 💌 Credits
-
-Built by the **Dream Wish Studio Team** with sparkles, coffee, and tons of anime inspiration! ☕✨
-
-> 📝 "*Even the tiniest dream can change the world...*" - DWS
-
----
-
-## 🐾 Arigatou~!
-
-Thanks for visiting! 🫶 Feel free to ⭐ star this repo and spread the word!
 
 
