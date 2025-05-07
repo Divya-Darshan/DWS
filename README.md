@@ -1,7 +1,5 @@
 # 🌟 Dream Wish Studio (DWS) - Official Website
 
-> ✨ *"Turning dreams into pixels, one wish at a time!"* ✨
-
 Welcome to the **official GitHub repository** for the Dream Wish Studio website! 💫  
 We're a passionate team of creators bringing *anime-style worlds*, *colorful characters*, and *magical stories* to life! 🖌️🎮
 
@@ -36,10 +34,8 @@ Our mission? To craft charming, whimsical, and epic tales that touch hearts and 
 - 🧪 **Dev Logs and Studio Updates**
 - 🌐 **Contact Portals to connect with fellow dreamers**
 
-Check it out here 👉 [Visit Website](https://dreamwishstudio.netlify.app/inde.html) *(Link your deployed website here)*
+Check it out here 👉 [Visit Website](https://dreamwishstudio.netlify.app/inde.html)
 
 ---
-
-## 💾 Repository Content
 
 
