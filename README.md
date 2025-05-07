@@ -1,4 +1,4 @@
-# 🌟 Dream Wish Studio (DWS) - Official Website 🌈
+# 🌟 Dream Wish Studio (DWS) - Official Website
 
 > ✨ *"Turning dreams into pixels, one wish at a time!"* ✨
 
@@ -36,7 +36,7 @@ Our mission? To craft charming, whimsical, and epic tales that touch hearts and 
 - 🧪 **Dev Logs and Studio Updates**
 - 🌐 **Contact Portals to connect with fellow dreamers**
 
-Check it out here 👉 [Visit Website](#) *(Link your deployed website here)*
+Check it out here 👉 [Visit Website](https://dreamwishstudio.netlify.app/inde.html) *(Link your deployed website here)*
 
 ---
 
