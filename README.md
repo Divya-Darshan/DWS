@@ -1,4 +1,4 @@
-# 🌟 Dream Wish Studio (DWS) - Official Website
+# 🌟 Dream Wish Studio (DWS)
 
 Welcome to the **official GitHub repository** for the Dream Wish Studio website! 💫  
 We're a passionate team of creators bringing *anime-style worlds*, *colorful characters*, and *magical stories* to life! 🖌️🎮
