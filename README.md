@@ -8,6 +8,7 @@ We're a passionate team of creators bringing *anime-style worlds*, *colorful cha
 Due to internal challenges faced by the team, development of this website has been halted.  
 But fear not! Our dreams live on through other creative ventures! 🌠🦋
 
+
 ---
 
 ## 🌸 About Dream Wish Studio
