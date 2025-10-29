@@ -35,7 +35,7 @@ Our mission? To craft charming, whimsical, and epic tales that touch hearts and 
 - 🧪 **Dev Logs and Studio Updates**
 - 🌐 **Contact Portals to connect with fellow dreamers**
 
-Check it out here 👉 [Visit Website](https://dreamwishstudio.netlify.app/inde.html)
+Check it out here 👉 [Visit Website](https://dreamwishstudio.netlify.app/)
 
 ---
 
