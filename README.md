@@ -1,3 +1,5 @@
+<!---The project have been discontinue,Dream Wish Studio (DWS) is a creative studio known for its work in anime fan dubbing and content creation. They specialize in producing Tamil-dubbed versions of popular anime, engaging with anime enthusiasts through their YouTube channel and social media platforms.
+
 # Dream Wish Studio (DWS)
 
 Welcome to the **official GitHub repository** for the Dream Wish Studio website! 💫  
@@ -33,7 +35,7 @@ Our mission? To craft charming, whimsical, and epic tales that touch hearts and 
 - 🖼️ **Gallery of Projects & Game Demos**
 - 📜 **Behind-the-scenes of our creations**
 - 🧪 **Dev Logs and Studio Updates**
-- 🌐 **Contact Portals to connect with fellow dreamers**
+- 🌐 **Contact Portals to connect with fellow dreamers** -->
 
 Check it out here 👉 [Visit Website](https://dreamwishstudio.netlify.app/)
 
