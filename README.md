@@ -35,10 +35,10 @@ Our mission? To craft charming, whimsical, and epic tales that touch hearts and 
 - 🖼️ **Gallery of Projects & Game Demos**
 - 📜 **Behind-the-scenes of our creations**
 - 🧪 **Dev Logs and Studio Updates**
-- 🌐 **Contact Portals to connect with fellow dreamers** -->
+- 🌐 **Contact Portals to connect with fellow dreamers** 
 
 Check it out here 👉 [Visit Website](https://dreamwishstudio.netlify.app/)
 
 ---
-
+-->
 
